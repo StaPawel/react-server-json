@@ -1,0 +1,24 @@
+FILTERING - http://localhost:3000/products?category=electronics
+FILTERING TWO DATA - http://localhost:3000/products?category=electronics&discount.type=shipping
+------------
+SORTING ASC- http://localhost:3000/products?_sort=price
+SORTING DESC - http://localhost:3000/products?_sort=price&_order=desc
+SORTING PRICE(DESC) AND CATEGORY(ASC) - http://localhost:3000/products?_sort=price,category&_order=desc,asc
+---------------
+PAGINATION 
+LIMIT - http://localhost:3000/products?_limit=2
+------------
+OPERATORTS
+2000 =< 6000 - http://localhost:3000/products?price_gte=2000&price_lte=6000   (gte - greater than or equal, lte - less than or equal)
+id =! 1 - http://localhost:3000/products?id_ne=1 (ne - not equal)
+CATEGORY STARTS BY 'F' - http://localhost:3000/products?category_like=^f
+-----------
+SEARCH TEXT
+SEARCH PRODUCTS CONTAINS 'IN' - http://localhost:3000/products?q=in
+-----------
+RELATIONSHIPS
+CONNECT PRODUCTS WITH CHILD REVIEWS - http://localhost:3000/products?_embed=reviews
+CONNECT PRODUCT 1 WITH CHILD REVIEW - http://localhost:3000/products/1?_embed=reviews
+EXPAND PRODUCT IN REVIEW - http://localhost:3000/reviews?_expand=product
+EXPAND PRODUCT IN REVIEW 1 - http://localhost:3000/reviews/1?_expand=product
+
