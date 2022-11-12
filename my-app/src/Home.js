@@ -4,6 +4,7 @@ import { Link, Route, Routes } from 'react-router-dom'
 import About from './About';
 import Product from './Product';
 import Products from './Products';
+import Cart from './Cart';
 
 const Home = (props) => {
   
@@ -18,8 +19,8 @@ const Home = (props) => {
   <Routes>
     <Route path='/about' element= {<About/>} />
     <Route path='/products/*' element= {<Products/>} />
-   
-    
+    <Route path='products/:id' element= {<Product />} />
+    <Route path='/cart' element={<Cart xd={0}/>} />
   </Routes>
     </div>
 
